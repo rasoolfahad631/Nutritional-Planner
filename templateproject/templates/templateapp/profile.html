@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+<link href="{% static 'css/mealplan.css' %}" rel="stylesheet" type="text/css">
+
+
+  <title>Profile</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <script src="https://kit.fontawesome.com/c11b7d741f.js" crossorigin="anonymous"></script>
+</head>
+
+</style>
+<body>
+
+ <nav class="my-navbar navbar navbar-expand-lg ">
+    <a class="navbar-brand" href="#">Nutrition4U</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-item nav-link active" href="#">Home<span class="sr-only">(current)</span></a>
+        <a class="nav-item nav-link" href="#">About</a>
+        <a class="nav-item nav-link"  data-toggle="modal" data-target="#modalContactForm" href="#">Contact</a>
+      </div>
+    </div>
+    <div class="navbar-nav navbar-right" >
+      <a class="nav-item nav-link" href="{% url 'account_setting'%}">Settings</a>
+      {%if user.is_authenticated %}
+        <a class="nav-item nav-link" href="{% url 'loginpage'%}"><i class="fas fa-user-plus"></i>Log Out</a>
+      {%endif%}
+      
+    </div>
+  </nav><br><br>
+  
+ 
+<h1>Hello {{user.username}} , Welcome to Nutri4u</h1>
+    <br>
+    <br>
+    <br>
+    <br>
+
+
+
+
+  <table>
+    <tr>
+      <td>Age</td>
+      <td>{{info.user_dob}}</td>
+    </tr>
+     <tr>
+      <td>Weight</td>
+      <td>{{info.user_weight}}</td>
+    </tr>
+     <tr>
+      <td>Height</td>
+      <td>{{info.user_height}}</td>
+    </tr>
+     <tr>
+      <td>Gender</td>
+      <td>{{info.user_gender}}</td>
+    </tr>
+     <tr>
+      <td>Goal</td>
+      <td>{{info.user_goal}}</td>
+    </tr>
+     <tr>
+      <td>Profession</td>
+      <td>{{info.user_profession}}</td>
+    </tr>
+     <tr>
+      <td>Lifestyle</td>
+      <td>{{info.user_lifestyle}}</td>
+    </tr>
+     <tr>
+      <td>Medical History</td>
+      <td>{{info.user_medicalhistory}}</td>
+    </tr>
+     <tr>
+      <td>Food Prefered</td>
+      <td>{{info.user_foodprefer}}</td>
+    </tr>
+    <tr>
+      <td>BMR</td>
+      <td>{{BMR}}</td>
+    </tr>
+        <tr>
+      <td>Clories Intake</td>
+      <td>{{calories}}</td>
+    </tr>
+ </table>
+    <br>
+    <br>
+    <br>
+
+    <button  class="bt btn-dark btn-lg" onclick="window.location.href = 'mealplan';">My Meal Plan</button>
+
+</body>

@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+<link href="{% static 'css/mealplan.css' %}" rel="stylesheet" type="text/css">
+
+
+  <title>MEAL PLAN</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <script src="https://kit.fontawesome.com/c11b7d741f.js" crossorigin="anonymous"></script>
+</head>
+
+</style>
+<body>
+
+ <nav class="my-navbar navbar navbar-expand-lg ">
+    <a class="navbar-brand" href="#">Nutrition4U</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-item nav-link active" href="#">Home<span class="sr-only">(current)</span></a>
+        <a class="nav-item nav-link" href="#">About</a>
+        <a class="nav-item nav-link"  data-toggle="modal" data-target="#modalContactForm" href="#">Contact</a>
+      </div>
+    </div>
+    <div class="navbar-nav navbar-right" >
+      {%if user.is_authenticated %}
+        <h3>Hey,{{user.username}},here is your diet plan!!</h3>
+        <a class="nav-item nav-link" href="{% url 'loginpage'%}"><i class="fas fa-user-plus"></i>Log Out</a>
+      {%else%}
+        <a class="nav-item nav-link" data-toggle="modal" data-target="#modalRegisterForm" href="#"><i class="fas fa-user-plus"></i>Sign Up</a>
+        <a class="nav-item nav-link" data-toggle="modal" data-target="#modalLoginForm" href="#"><i class="fas fa-sign-in-alt"></i>Login</a>
+      {%endif%}
+    </div>
+  </nav><br><br>
+
+  
+
+  
+  
+  
+ 
+ 
+
+
+<div class="container" id="jb">
+  <div class="jumbotron" id="jumbotron1">
+    <h1 class="jb1">MEAL PLAN</h1>  
+    <br>
+    <br>
+    <h4>BREAKFAST</h4>
+    <hr>
+    <br>
+<div style="overflow-x:auto;">
+  <table class="jbt1">
+    <tr>
+      <th></th>
+      <th>Name</th>
+      <th>Weight(g)</th>
+      <th>Calories</th>
+      <th>Proteins</th>
+      <th>Carbs</th>
+      <th>Fats</th>
+    </tr> 
+    <tr>
+      <td>PLAN 1</td>
+      <td>Pineapple juice</td>
+      <td>264g</td>
+      <td>148</td>
+      <td>0</td>
+      <td>36</td>
+      <td>0</td>
+    </tr>
+     <tr>
+      <td>PLAN 2</td>
+      <td>Fruit Salad</td>
+      <td>300g</td>
+      <td>210</td>
+      <td>3</td>
+      <td>54</td>
+      <td>0</td>
+    </tr>
+     <tr>
+      <td>PLAN 3</td>
+      <td>peanut butter Sandwich</td>
+      <td>84g</td>
+      <td>402</td>
+      <td>6</td>
+      <td>54</td>
+      <td>18</td>
+    </tr>
+  </div>   
+</table>
+</div>
+</div>
+
+<div class="jumbotron" id="jumbotron2">
+    <br>
+    <br>
+    <br>
+    <h4>LUNCH</h4>
+    <hr>
+    <br>
+  <div style="overflow-x:auto;">
+    <table class="jbt1">
+      <tr>
+        <th></th>
+        <th>Name</th>
+        <th>Weight(g)</th>
+        <th>Calories</th>
+        <th>Proteins</th>
+        <th>Carbs</th>
+        <th>Fats</th>
+      </tr> 
+      <tr>
+        <td>PLAN 1</td>
+        <td>Brocolli</td>
+        <td>230g</td>
+        <td>80</td>
+        <td>5</td>
+        <td>51</td>
+        <td>0</td>
+      </tr>
+      <tr>
+        <td>PLAN 2</td>
+        <td>Spinach(Boiled)</td>
+        <td>380g</td>
+        <td>88</td>
+        <td>17</td>
+        <td>67</td>
+        <td>0</td>
+      </tr>
+      <tr>
+        <td>PLAN 3</td>
+        <td>Cauliflower</td>
+        <td>318g</td>
+        <td>78</td>
+        <td>523</td>
+        <td>85</td>
+        <td>0</td>
+      </tr>  
+    </table>
+  </div>
+</div>   
+
+
+<div class="jumbotron" id="jumbotron2">
+    <br>
+    <br>
+    <br>
+    <h4>PRE-WORKOUT</h4>
+    <hr>
+    <br>
+  <div style="overflow-x:auto;">
+    <table class="jbt1">
+      <tr>
+        <th></th>
+        <th>Name</th>
+        <th>Weight(g)</th>
+        <th>Calories</th>
+        <th>Proteins</th>
+        <th>Carbs</th>
+        <th>Fats</th>
+      </tr> 
+      <tr>
+        <td>PLAN 1</td>
+        <td>Walnuts</td>
+        <td>25</td>
+        <td>166</td>
+        <td>4</td>
+        <td>3</td>
+        <td>1</td>
+      </tr>
+      <tr>
+        <td>PLAN 2</td>
+        <td>Almonds</td>
+        <td>36</td>
+        <td>208</td>
+        <td>8</td>
+        <td>7</td>
+        <td>2</td>
+      </tr>
+      <tr>
+        <td>PLAN 3</td>
+        <td>Bananas(Qty:2)</td>
+        <td>120</td>
+        <td>160</td>
+        <td>4</td>
+        <td>5</td>
+        <td>3</td>
+      </tr>  
+    </table>
+  </div>
+</div> 
+
+
+<div class="jumbotron" id="jumbotron2">
+    <br>
+    <br>
+    <br>
+    <h4>POST-WORKOUT</h4>
+    <hr>
+    <br>
+  <div style="overflow-x:auto;">
+    <table class="jbt1">
+      <tr>
+        <th></th>
+        <th>Name</th>
+        <th>Weight(g)</th>
+        <th>Calories</th>
+        <th>Proteins</th>
+        <th>Carbs</th>
+        <th>Fats</th>
+      </tr> 
+      <tr>
+        <td>PLAN 1</td>
+        <td>Buttermilk</td>
+        <td>245</td>
+        <td>100</td>
+        <td>8</td>
+        <td>12</td>
+        <td>2</td>
+      </tr>
+      <tr>
+        <td>PLAN 2</td>
+        <td>Oatmeal</td>
+        <td>558</td>
+        <td>336</td>
+        <td>12</td>
+        <td>60</td>
+        <td>6</td>
+      </tr>
+      <tr>
+        <td>PLAN 3</td>
+        <td>Sweet Corn</td>
+        <td>348</td>
+        <td>328</td>
+        <td>12</td>
+        <td>76</td>
+        <td>4</td>
+      </tr>  
+    </table>
+  </div>
+</div> 
+
+
+<div class="jumbotron" id="jumbotron2">
+    <br>
+    <br>
+    <br>
+    <h4>DINNER</h4>
+    <hr>
+    <br>
+  <div style="overflow-x:auto;">
+    <table class="jbt1">
+      <tr>
+        <th></th>
+        <th>Name</th>
+        <th>Weight(g)</th>
+        <th>Calories</th>
+        <th>Proteins</th>
+        <th>Carbs</th>
+        <th>Fats</th>
+      </tr> 
+      <tr>
+        <td>PLAN 1</td>
+        <td>Chicken</td>
+        <td>75</td>
+        <td>109</td>
+        <td>156</td>
+        <td>50</td>
+        <td>6</td>
+      </tr>
+      <tr>
+        <td>PLAN 2</td>
+        <td>Spinach(Boiled)</td>
+        <td>380</td>
+        <td>109</td>
+        <td>88</td>
+        <td>5</td>
+        <td>0</td>
+      </tr>
+      <tr>
+        <td>PLAN 3</td>
+        <td>Fish</td>
+        <td>250</td>
+        <td>109</td>
+        <td>78</td>
+        <td>50</td>
+        <td>2</td>
+      </tr>  
+    </table>
+  </div>
+</div>   
+</body>
+</html>

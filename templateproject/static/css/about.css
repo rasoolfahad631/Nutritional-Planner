@@ -1,0 +1,12 @@
+
+.jumbotron{
+	position:absolute;
+	width:600px;
+	margin-left:55%;
+	margin-top:2%;
+	height:600px;
+	right:8%;
+	background-image: url('/static/images/about.jpeg' );
+background-size:600px 600px;
+background-repeat: no-repeat;
+}

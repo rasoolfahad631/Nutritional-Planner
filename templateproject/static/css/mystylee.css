@@ -1,0 +1,106 @@
+.content {
+	position: absolute;
+   right: 5%;
+  width: 700px;
+  padding-left: 30px;
+  margin-top:30%;
+  text-align: center;
+  color:green;
+  
+}
+body{
+
+	background-image: url('/static/images/bck.jpg' );
+	background-size:100% 150%;
+
+}
+.my-navbar{
+	background-color: rgba(0,0,0,0.015);
+}
+.jumbotron{
+	position:absolute;
+	width:600px;
+	margin-left:55%;
+	margin-top:2%;
+	height:350px;
+	right:8%;
+	background-image: url('/static/images/jb3.jpg' );
+background-size:600px 350px;
+background-repeat: no-repeat;
+}
+html{
+	overflow:scroll;
+}
+#jb{
+	color:black;
+
+}
+.jumbo{
+	position:absolute;
+	top:10px;
+}
+p{
+	font-size: 20px;
+	color:block;
+	font-weight:500;
+}
+.navbar-brand{
+	color:black;
+	font-size:30px;
+		font-weight: 500px;
+}
+.nav-item{
+	color: black;
+	font-size:20px;
+	font-weight: 500px;
+}
+h1{
+	font-family:cute maple;
+}
+hr{
+	color:black;
+}
+
+div.model-content{
+  background-color: transparent;
+}
+
+.input-container {
+  display: flex;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+/* Style the form icons */
+.icon {
+  padding: 10px;
+  background: dodgerblue;
+  color: white;
+  min-width: 50px;
+  text-align: center;
+}
+
+/* Style the input fields */
+.input-field {
+  width: 100%;
+  padding: 10px;
+  outline: none;
+}
+
+.input-field:focus {
+  border: 2px solid dodgerblue;
+}
+
+/* Set a style for the submit button */
+.btn {
+  background-color: dodgerblue;
+  color: white;
+  padding: 15px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+.btn:hover {
+  opacity: 1;
+}

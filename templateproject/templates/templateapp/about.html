@@ -1,0 +1,39 @@
+<html>
+{% load static %}
+  <head>    
+    <title>{% block title %}About{% endblock %}</title>
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://kit.fontawesome.com/c11b7d741f.js" crossorigin="anonymous"></script>
+      <link href="{% static 'css/about.css' %}" rel="stylesheet" type="text/css">
+
+  </head>
+  <body>
+      <nav class="my-navbar navbar navbar-expand-lg ">
+        <a class="navbar-brand" href="#">Nutrition4U</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-item nav-link active" href="/">Home<span class="sr-only">(current)</span></a>
+            <a class="nav-item nav-link" href="{% url 'about'%}">About</a>
+            <a class="nav-item nav-link" href="{% url 'contact'%}">Contact</a>
+      </div>
+    </div>
+    <div class="navbar-nav navbar-right" >
+      <a class="nav-item nav-link"  href={% url 'signup'%}><i class="fas fa-user-plus"></i>Sign Up</a>
+      <a class="nav-item nav-link"  href={% url 'loginpage'%}><i class="fas fa-sign-in-alt"></i>Login</a>
+    </div>
+  </nav>
+  
+      <div class="jumbotron">
+        <div class="jumbo">
+          <h1 id="jb">About OurSelf</h1>
+          <p id="jb1">This article is designed to give tips to readers about how they can improve or augment actions in their life to have a healthy lifestyle; it is not meant to be all inclusive but will include major components that are considered to be parts of a lifestyle that lead to good health. In addition to the tips about what people should do for healthy living, the article will mention some of the tips about avoiding actions (the don'ts) that lead to unhealthy living.
+
+            "Healthy living" to most people means both physical and mental health are in balance or functioning well together in a person. In many instances, physical and mental health are closely linked, so that a change (good or bad) in one directly affects the other. Consequently, some of the tips will include suggestions for emotional and mental "healthy living.". <br>Find what works for you and your family<br> within your food preferences, health goals,<br> and budget</p>
+        </div>
+      </div>
+  
+    
+   

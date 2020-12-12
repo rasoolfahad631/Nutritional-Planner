@@ -1,0 +1,59 @@
+.container.jb{
+	width:1000px;
+	margin-left: 50px;
+	margin-right: 50px;
+	padding-top: 100px;
+	max-height: 80%;
+
+}
+.jumbotron{
+	height:650px;
+	margin-left: 250px;
+	margin-right: 100px;
+	margin-top: 100px;
+}
+
+.jb1{
+	padding-top:0px;
+	text-align:top;
+}
+
+.jbt1 {
+  border-collapse: collapse;
+  width: 100%;
+  margin-left:0px;
+}
+
+th, td {
+  text-align: left;
+  padding: 18px;
+  font-size: 20px;
+}
+
+tr:nth-child(even) {background-color: #f2f2f2;}
+
+.my-navbar{
+	background-color: rgba(0,0,0,0.015);
+	height: 80px;
+	position:fixed;
+	top: 0;
+	
+}
+
+.navbar-brand{
+	color:black;
+	font-size:30px;
+		font-weight: 500px;
+}
+.nav-item{
+	color: black;
+	font-size:20px;
+	font-weight: 500px;
+}
+
+
+
+
+
+
+

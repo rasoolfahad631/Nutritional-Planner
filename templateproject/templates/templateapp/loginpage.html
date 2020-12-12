@@ -1,0 +1,72 @@
+<script src="https://kit.fontawesome.com/c11b7d741f.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+{% load static %}
+<link href="{% static 'css/login.css' %}" rel="stylesheet" type="text/css">
+
+<body>
+<nav class="my-navbar navbar navbar-expand-lg ">
+    <a class="navbar-brand" href="#">Nutrition4U</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-item nav-link active" href="/">Home<span class="sr-only">(current)</span></a>
+        <a class="nav-item nav-link" href={% url 'about'%}>About</a>
+        <a class="nav-item nav-link"  href="{% url 'contact'%}">Contact</a>
+      </div>
+    </div>
+    <div class="navbar-nav navbar-right" >
+      <a class="nav-item nav-link" href="{% url 'signup'%}"><i class="fas fa-user-plus"></i>Sign Up</a>
+      <a class="nav-item nav-link"  href="{% url 'loginpage'%}"><i class="fas fa-sign-in-alt"></i>Login</a>
+    </div>
+  </nav>
+
+  <form action=" " method="POST">
+  {% csrf_token %}
+ <div class="background">
+  <div class="container">
+    <div class="screen">
+      <div class="screen-header">
+        <div class="screen-header-left">
+          <div class="screen-header-button close"></div>
+          <div class="screen-header-button maximize"></div>
+          <div class="screen-header-button minimize"></div>
+        </div>
+        <div class="screen-header-right">
+          <div class="screen-header-ellipsis"></div>
+          <div class="screen-header-ellipsis"></div>
+          <div class="screen-header-ellipsis"></div>
+        </div>
+      </div>
+      <div class="screen-body">
+        <div class="screen-body-item left">
+          <div class="app-title">
+            <span>LOG</span>
+            <span>IN</span>
+          </div>
+        </div>
+        <div class="screen-body-item">
+          <div class="app-form">
+            <div class="app-form-group">
+              <input  class="app-form-control" placeholder="USERNAME" name="username" autocomplete="off" type="text">
+            </div>
+            <div class="app-form-group">
+              <input class="app-form-control" placeholder="PASSWORD" name="password" type="password">
+            </div>
+            {%for message in messages%}
+              <h4 class="message-login">{{message}}</h4>
+            {%endfor%}
+            <div class="app-form-group buttons">
+              <button class="app-form-button">Login</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    </div>
+  </div>
+ </div>
+ </form>
+</body>
